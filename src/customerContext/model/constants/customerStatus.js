@@ -1,0 +1,8 @@
+const CUSTOMER_STATUS = {
+  NEW: 1,
+  INTERESTED: 2,
+  DISINTERESTED: 3
+}
+
+export default CUSTOMER_STATUS
+

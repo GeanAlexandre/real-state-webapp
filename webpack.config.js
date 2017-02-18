@@ -1,5 +1,6 @@
 var path = require('path')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var FlowBabelWebpackPlugin = require('flow-babel-webpack-plugin')
 
 const PATHS = {
   app: path.join(__dirname, 'src'),
@@ -32,10 +33,13 @@ module.exports = {
       realStateContext: path.join(PATHS.app, 'realStateContext')
     }
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: path.join(PATHS.app, 'index.html'),
-    inject: false
-  })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(PATHS.app, 'index.html'),
+      inject: false
+    }),
+    new FlowBabelWebpackPlugin()
+  ],
   module: {
     loaders: [
       {

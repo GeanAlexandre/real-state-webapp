@@ -1,0 +1,6 @@
+{
+  "retainLines": true,
+  "plugins": [
+    "transform-flow-comments"
+  ]
+}
